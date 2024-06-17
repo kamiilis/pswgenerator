@@ -1,0 +1,81 @@
+@use '../../../mixins.scss';
+@import '../../../variables.scss';
+
+.infoAccordionItem {
+    padding-bottom: 24px;
+    border-bottom: 1px solid $gray_3;
+    cursor: pointer;
+
+
+    &:not(:last-of-type) {
+        margin-bottom: 8px;
+    }
+
+    &__imageWrap {
+        display: grid;
+        justify-content: center;
+    }
+
+    &__questionBox {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        align-items: center;
+        column-gap: 16px;
+    }
+
+    &__cross {
+        display: grid;
+        grid-template-columns: max-content;
+    }
+
+    &__crossSymbolOne {
+        height: 2px;
+        width: 12px;
+        background-color: $black;
+        border-radius: 25px;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        transition: transform .25s;
+
+        &--active {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__crossSymbolTwo {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        height: 2px;
+        width: 12px;
+        background-color: $black;
+        transform-origin: center;
+        border-radius: 25px;
+        transform: rotate(90deg);
+        transition: transform .25s;
+
+        &--active {
+            transform: rotate(135deg);
+        }
+    }
+
+    &__question {
+        @include mixins.fontAll(18px, 24px, 600, Roboto, $black);
+        text-align: center;
+        margin-left: 16px;
+    }
+
+    &__answerWrapper {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.25s ease-out;
+        margin: 0;
+    }
+
+    &__answer {
+        padding-top: 16px;
+        @include mixins.fontAll(16px, 24px, 400, Roboto, $gray_2);
+        display: grid;
+        justify-items: center;
+        text-align: center;
+    }
+}

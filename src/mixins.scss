@@ -1,0 +1,21 @@
+@mixin mediaQueryMin($breakpoint) {
+    @if $breakpoint ==tablet {
+        @media screen and (min-width: 48em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==desktop {
+        @media screen and (min-width: 68.75em) {
+            @content;
+        }
+    }
+}
+
+@mixin fontAll($fontSize, $lineHeight, $fontWeight, $fontFamily, $color) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    font-family: $fontFamily, sans-serif;
+    color: $color;
+}

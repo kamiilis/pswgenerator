@@ -1,0 +1,11 @@
+@use '../../../mixins.scss';
+
+.infoAccordion{
+    border-radius: 8px;
+    padding: 16px 10px;
+    
+    @include mixins.mediaQueryMin(tablet){
+        display: none;
+    }
+}
+

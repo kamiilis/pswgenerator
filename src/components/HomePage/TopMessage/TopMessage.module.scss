@@ -1,0 +1,17 @@
+@use '../../../mixins.scss';
+@import '../../../variables.scss';
+
+.topMessage {
+    @include mixins.fontAll(12px, 14px, 400, Roboto, $gray);
+    text-align: center;
+    padding: 16px 10px;
+
+    @include mixins.mediaQueryMin(tablet) {
+        padding: 24px 10px;
+    }
+
+    &__link {
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
