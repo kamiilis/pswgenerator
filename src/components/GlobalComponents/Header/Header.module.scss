@@ -1,26 +1,26 @@
 @use '../../../mixins.scss';
 @import '../../../variables.scss';
 
-.header{
+.header {
     background-color: $black_2;
 
-    &__nav{
+    &__nav {
         max-width: 1160px;
         margin: 0 auto;
-        padding: 20px 10px;
+        padding: $space-20 $space-10;
     }
 
-    &__navLink{
+    &__navLink {
         display: grid;
         justify-content: center;
         cursor: pointer;
-  
-        @include mixins.mediaQueryMin(tablet){
+
+        @include mixins.mediaQueryMin(tablet) {
             display: inline-block;
         }
     }
 
-    &__navLogo{
+    &__navLogo {
         max-width: 183px;
         width: 100%;
     }

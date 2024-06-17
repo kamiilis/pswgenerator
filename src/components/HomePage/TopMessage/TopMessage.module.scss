@@ -2,12 +2,12 @@
 @import '../../../variables.scss';
 
 .topMessage {
-    @include mixins.fontAll(12px, 14px, 400, Roboto, $gray);
+    @include mixins.fontAll($font-12, $line-14, 400, Roboto, $gray);
     text-align: center;
-    padding: 16px 10px;
+    padding: $space-16 $space-24;
 
     @include mixins.mediaQueryMin(tablet) {
-        padding: 24px 10px;
+        padding: $space-24 $space-10;
     }
 
     &__link {

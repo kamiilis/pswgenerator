@@ -8,47 +8,47 @@
     }
 
     &__content {
-        margin: 0 10px;
+        margin: 0 $space-10;
         background-color: $black;
         max-width: 1160px;
         width: 100%;
         display: grid;
         justify-items: center;
-        padding: 24px 10px;
+        padding: $space-24 $space-10;
 
         @include mixins.mediaQueryMin(tablet) {
-            padding: 56px 10px 37px;
+            padding: $space-56 $space-10 $space-37;
         }
     }
 
     &__header {
-        @include mixins.fontAll(28px, 40px, 700, Roboto, $white);
+        @include mixins.fontAll($font-28, $line-40, 700, Roboto, $white);
         margin-bottom: 4px;
         text-align: center;
 
         @include mixins.mediaQueryMin(tablet) {
             font-size: 40px;
             line-height: 52px;
-            margin-bottom: 8px;
+            margin-bottom: $space-8;
         }
     }
 
     &__headingText {
-        @include mixins.fontAll(12px, 18px, 400, Roboto, $white);
-        margin-bottom: 4px;
+        @include mixins.fontAll($font-12, $line-18, 400, Roboto, $white);
+        margin-bottom: $space-4;
         text-align: center;
 
         @include mixins.mediaQueryMin(tablet) {
             font-size: 16px;
             line-height: 22px;
-            margin-bottom: 8px;
+            margin-bottom: $space-8;
         }
 
         &:last-of-type {
-            margin-bottom: 16px;
+            margin-bottom: $space-16;
 
             @include mixins.mediaQueryMin(tablet) {
-                margin-bottom: 24px;
+                margin-bottom: $space-24;
             }
         }
     }
@@ -65,10 +65,10 @@
     }
 
     &__popup {
-        @include mixins.fontAll(12px, 12px, 700, Roboto, $white);
+        @include mixins.fontAll($font-12, $line-12, 700, Roboto, $white);
         position: absolute;
         background-color: $green;
-        padding: 8px;
+        padding: $space-8;
         bottom: 100%;
         right: 0;
         border-radius: 8px;
@@ -86,11 +86,11 @@
     }
 
     &__passwordInput {
-        @include mixins.fontAll(16px, 19px, 700, Roboto, $charcoal);
+        @include mixins.fontAll($font-16, $line-19, 700, Roboto, $charcoal);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding: 12px 40px 12px 12px;
+        padding: $space-12 $space-40 $space-12 $space-12;
         width: 100%;
         grid-row: 1/2;
         grid-column: 1/2;
@@ -98,9 +98,9 @@
         outline: none;
 
         @include mixins.mediaQueryMin(tablet) {
-            padding: 14px 60px 13px 24px;
-            font-size: 20px;
-            line-height: 23px;
+            padding: $space-14 $space-60 $space-13 $space-24;
+            font-size: $font-20;
+            line-height: $line-23;
         }
     }
 
@@ -108,17 +108,17 @@
         grid-row: 1/2;
         grid-column: 1/2;
         justify-self: flex-end;
-        margin-right: 10px;
+        margin-right: $space-10;
         cursor: pointer;
         width: 20px;
 
         @include mixins.mediaQueryMin(tablet) {
-            margin-right: 25px;
+            margin-right: $space-25;
         }
     }
 
     &__copyPassword {
-        @include mixins.fontAll(16px, 28px, 700, Roboto, $white);
+        @include mixins.fontAll($font-16, $line-28, 700, Roboto, $white);
         text-transform: capitalize;
         background-color: $green;
         border: none;
@@ -146,18 +146,18 @@
     }
 
     &__selectBoxListWrap {
-        margin-top: 24px;
+        margin-top: $space-24;
         display: grid;
         grid-template-columns: repeat(2, max-content);
         grid-template-rows: repeat(2, min-content);
-        row-gap: 16px;
-        column-gap: 26px;
+        row-gap: $space-16;
+        column-gap: $space-26;
         justify-content: center;
 
         @include mixins.mediaQueryMin(tablet) {
             grid-template-columns: repeat(4, max-content);
             grid-template-rows: unset;
-            column-gap: 26px;
+            column-gap: $space-26;
         }
     }
 
@@ -172,8 +172,8 @@
     }
 
     &__selectBoxLabel {
-        margin-left: 8px;
-        @include mixins.fontAll(12px, 22px, 400, Roboto, #fff);
+        margin-left: $space-8;
+        @include mixins.fontAll($font-12, $line-22, 400, Roboto, #fff);
     }
 
 }

@@ -4,6 +4,13 @@ import InfoAccordionItem from '../InfoAccordionItem/InfoAccordionItem';
 import s from './InfoAccordion.module.scss';
 import data from '../../../data.json';
 
+type Information = {
+  question: string,
+  answer: string,
+  image: string,
+  id: number
+};
+
 const InfoAccordion = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -13,14 +20,14 @@ const InfoAccordion = () => {
 
   return (
     <div className={s.infoAccordion}>
-      {data.information.map(({ question, answer, image }, index) => (
+      {data.information.map(({ question, answer, image, id }: Information) => (
         <InfoAccordionItem
-          key={index}
-          index={index}
+          key={id}
+          index={id}
           question={question}
           answer={answer}
           image={image}
-          isOpen={index === openIndex}
+          isOpen={id === openIndex}
           toggleAnswer={toggleAnswer}
         />
       ))}

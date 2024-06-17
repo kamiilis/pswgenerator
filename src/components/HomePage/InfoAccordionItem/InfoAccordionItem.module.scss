@@ -2,13 +2,13 @@
 @import '../../../variables.scss';
 
 .infoAccordionItem {
-    padding-bottom: 24px;
+    padding-bottom: $space-24;
     border-bottom: 1px solid $gray_3;
     cursor: pointer;
 
 
     &:not(:last-of-type) {
-        margin-bottom: 8px;
+        margin-bottom: $space-8;
     }
 
     &__imageWrap {
@@ -20,7 +20,7 @@
         display: grid;
         grid-template-columns: 1fr max-content;
         align-items: center;
-        column-gap: 16px;
+        column-gap: $space-16;
     }
 
     &__cross {
@@ -59,9 +59,9 @@
     }
 
     &__question {
-        @include mixins.fontAll(18px, 24px, 600, Roboto, $black);
+        @include mixins.fontAll($font-18, $line-24, 600, Roboto, $black);
         text-align: center;
-        margin-left: 16px;
+        margin-left: $space-16;
     }
 
     &__answerWrapper {
@@ -72,8 +72,8 @@
     }
 
     &__answer {
-        padding-top: 16px;
-        @include mixins.fontAll(16px, 24px, 400, Roboto, $gray_2);
+        padding-top: $space-16;
+        @include mixins.fontAll($font-16, $line-24, 400, Roboto, $gray_2);
         display: grid;
         justify-items: center;
         text-align: center;

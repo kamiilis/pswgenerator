@@ -1,11 +1,11 @@
 @use '../../../mixins.scss';
+@import '../../../variables.scss';
 
-.infoAccordion{
+.infoAccordion {
     border-radius: 8px;
-    padding: 16px 10px;
-    
-    @include mixins.mediaQueryMin(tablet){
+    padding: $space-16 $space-10;
+
+    @include mixins.mediaQueryMin(tablet) {
         display: none;
     }
 }
-
